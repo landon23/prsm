@@ -99,6 +99,49 @@ def print_outlier_quants(tup):
         print('Estimated overlap:', tup[4])
         print('Overlap standard error:', tup[5])
 
+def print_outlier_edge(out, sp, verbose = True):
+
+    s = out.sample
+    asd = sp.appr_esd
+
+    if s <= asd.dens.r:
+        if verbose:
+            print('Eigenvalue inside fitted spectral distribution')
+            return
+
+    m = asd.calc_m(s, 0)
+    mp = asd.calc_m(s, 1)
+    mppp = asd.calc_m(s, 3)
+    data = (s, m, mp, mppp)
+    out.calculate(data)
+    tw_mean = sp.tw_mean
+    tw_std = sp.tw_std
+
+
+    d = s - asd.dens.r
+    d = d / out.samp_std
+
+
+    if asd.dens.sq:
+        e = (s - tw_mean) / tw_std
+    else:
+        e = (s - sp.edge)/sp.ip
+    o = out.over_norm_std
+    if verbose:
+        print('Distance to edge normalized by sample std:', d)
+        if asd.dens.sq:
+            print('Distance to TW mean divided by TW std:', e)
+        else:
+            print('Distance to spectral edge divided by edge-interparticle distance:', e)
+        print('Overlap std divided by overlap:', o)
+
+    return (d, e, o)
+
+
+
+
+
+
 #below are functions which will return function objects evaluating
 # 1) the distance from the spectral edge normalized by the estimated sample outlier std at that point
 # 2) the overlap standard error as a function of sample eigenvalue position
@@ -154,3 +197,15 @@ def bin_edges(x, n, nb):
 
 
 
+def calc_outlier(outlier, appr_esd):
+    s = outlier.sample
+
+    if s < appr_esd.dens.r:
+        outlier.inside_spec = True
+    else:
+        outlier.inside_spec = False
+        m = appr_esd.calc_m(s, 0)
+        mp = appr_esd.calc_m(s, 1)
+        mppp = appr_esd.calc_m(s, 3)
+        data = (s, m, mp, mppp)
+        outlier.calculate(data)

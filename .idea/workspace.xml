@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="004c74f3-012b-4b4d-bc1b-48ae4b986b11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prsm/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/prsm/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/prsm_demo-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/prsm_demo-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prsm/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/prsm/methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prsm_demo.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/prsm_demo.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +65,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="662" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1593092749607">
+    <state x="662" y="384" key="com.intellij.ide.util.TipDialog" timestamp="1593705054260">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="662" y="384" key="com.intellij.ide.util.TipDialog/0.23.1920.1057/1920.23.1280.777@0.23.1920.1057" timestamp="1593092749607" />
+    <state x="662" y="384" key="com.intellij.ide.util.TipDialog/0.23.1920.1057/1920.23.1280.777@0.23.1920.1057" timestamp="1593705054260" />
   </component>
 </project>
